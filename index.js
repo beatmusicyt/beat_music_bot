@@ -24,7 +24,7 @@ const songSchema = mongoose.Schema({
 });
 
 const TSong = new mongoose.model("TSong", songSchema);
-
+/*
 app.get("/admin",(req,res)=>{
     var authheader = req.headers.authorization;
     console.log(req.headers);
@@ -50,7 +50,7 @@ app.get("/admin",(req,res)=>{
         res.end(err);
     }
 });
-
+*/
 app.get("/api/addSong", async(req,res)=>{
     if(!req.query.token=="iamunknown#321"){
         res.json({
