@@ -33,7 +33,7 @@ app.get("/admin",(req,res)=>{
         var err = new Error('You are not authenticated!');
         res.setHeader('WWW-Authenticate', 'Basic');
         err.status = 401;
-        return next(err)
+        res.end(err)
     }
  
     var auth = new Buffer.from(authheader.split(' ')[1],
@@ -47,7 +47,7 @@ app.get("/admin",(req,res)=>{
         var err = new Error('You are not authenticated!');
         res.setHeader('WWW-Authenticate', 'Basic');
         err.status = 401;
-        return next(err);
+        res.end(err);
     }
 });
 
