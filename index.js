@@ -52,7 +52,7 @@ app.get("/admin",(req,res)=>{
 });
 */
 app.get("/api/addSong", async(req,res)=>{
-    if(!req.query.token=="iamunknown#321"){
+    if(req.query.token!="iamunknown#321"){
         res.json({
             msg:"invalid token"
         });
